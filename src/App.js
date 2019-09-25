@@ -19,15 +19,32 @@ function App() {
   // Don't forget to pass the functions (and any additional data needed) to the components as props
   const [displayValue, setDisplayValue] = useState('0');
 
+  const click = elem => {
+    let value = elem.target.value;
+    displayValue(displayValue + value);
+  };
+
+  const numClick = elem => {
+    let num = elem.target.value;
+    if (displayValue === '0') setDisplayValue(num);
+    else setDisplayValue(`${displayValue}${num}`);
+  };
+
   return (
     <div className="container">
       <Logo />
       <div className="App">
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
-        <Display />
-        <Numbers />
-        <Operators />
-        <Specials />
+        <Display displayValue={displayValue} />
+        <div className="buttons-container">
+          <div className="left">
+            <Specials />
+            <Numbers click={numClick} />
+          </div>
+          <div className="right">
+            <Operators />
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1,14 +1,10 @@
 import React from 'react';
 
-const NumberButton = props => {
+const NumberButton = ({ number, numClick }) => {
   return (
-    <button
-      className="number-button"
-      value={props.number}
-      onClick={props.onClick}
-    >
+    <button className="number-button" value={number} onClick={numClick}>
       {/* Display a button element rendering the data being passed down from the parent container on props */}
-      {props.number}
+      {number}
     </button>
   );
 };

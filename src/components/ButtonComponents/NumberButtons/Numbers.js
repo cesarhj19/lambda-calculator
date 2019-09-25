@@ -9,7 +9,7 @@ import { numbers } from '../../../data'
 import { numbers } from '../../../data';
 import NumberButton from './NumberButton';
 
-const Numbers = props => {
+const Numbers = ({ click }) => {
   // STEP 2 - add the imported data to state
   const [numberState, setNumberState] = useState(numbers);
   return (
@@ -22,7 +22,7 @@ const Numbers = props => {
           className="numberButton"
           number={elem}
           key={index}
-          onClick={props.onClick}
+          numClick={click}
         />
       ))}
     </div>
