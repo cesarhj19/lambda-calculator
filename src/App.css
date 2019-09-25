@@ -1,22 +1,102 @@
 .container {
-    background-color: #c00025;
-    width: 100%;
-    max-width: 550px;
-    border-radius: 15px;
-    border: 2px solid grey;
-    padding-bottom: 25px;
+  background-color: #c00025;
+  width: 100%;
+  max-width: 550px;
+  border-radius: 15px;
+  border: 2px solid grey;
+  padding-bottom: 25px;
 }
+
+.logo-container {
+    padding: 37px 0 0px 33px;
+}
+
 .display {
-    margin-top: 25px;
-    height: 100px;
-    width: 450px;
-    border-radius: 50px;
-    color: white;
-    background-color: #322c2d;
-    box-shadow: 1px 1px #322c2d;
+  margin: 0 auto;
+  margin-top: 25px;
+  height: 100px;
+  width: 450px;
+  border-radius: 50px;
+  color: white;
+  background-color: #322c2d;
+  box-shadow: 1px 1px #322c2d;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-right: 8%;
+  font-size: 5rem;
+}
+
+.App {
+  flex-flow: column;
+}
+
+.buttons-container {
+  display: flex;
+  width: 89%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.left {
+  width: 75%;
+}
+
+.special-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.special-button {
+  border-radius: 50%;
+  padding: 35px;
+  font-size: 22px;
+  width: 100px;
+  margin: 5px 0 5px 0;
+  background-color: #0b5d9b;
+  border-color: #4b0e15;
+  color: #f2f2f2;
+}
+
+.numbers-container {
     display: flex;
-    justify-content: flex-end;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.number-button {
+    border-radius: 50%;
+    padding: 35px;
+    font-size: 22px;
+    width: 100px;
+    margin: 5px 0 5px 0;
+    background-color: #094377;
+    border-color: #4b0e15;
+    color: #f2f2f2;
+}
+
+.number-button:nth-child(10){
+    border-radius: 500px;
+    width: 245px;
+}
+
+.right {
+  width: 25%;
+}
+
+.operator-container {
+    display: flex;
+    flex-flow: column;
     align-items: flex-end;
-    padding-right: 8%;
-    font-size: 5.0rem;
-  }
+}
+
+.operator-button {
+    border-radius: 50%;
+    padding: 35px;
+    font-size: 22px;
+    width: 100px;
+    margin: 5px 0 5px 0;
+    background-color: #007291;
+    border-color: #4b0e15;
+    color: #f2f2f2;
+}
